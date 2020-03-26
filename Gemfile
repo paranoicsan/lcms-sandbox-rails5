@@ -18,8 +18,6 @@ gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -37,6 +35,21 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-classnames', '~> 2.2.5'
+  gem 'rails-assets-es6-promise', '~> 4.2.4'
+  gem 'rails-assets-eventemitter3', '~> 3.1.2'
+  gem 'rails-assets-fetch', '~> 3.0.0'
+  gem 'rails-assets-jstree', '~> 3.3.8'
+  gem 'rails-assets-knockout', '~> 3.5.0'
+  gem 'rails-assets-lodash', '~> 4.17.15'
+  gem 'rails-assets-selectize', '~> 0.12.6'
+end
+
+gem 'lcms-engine', git: 'https://github.com/learningtapestry/lcms-engine.git',
+                   branch: 'rails5-tmp',
+                   ref: '93cf304'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -63,3 +76,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'wicked_pdf', git: 'https://github.com/learningtapestry/wicked_pdf.git',
+                  branch: 'puppeteer-support',
+                  ref: '964a090'
